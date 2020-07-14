@@ -1,0 +1,36 @@
+# getting ssh to work
+
+TERMINAL ON MACHINE:
+
+ssh-keygen -t rsa -b 4096 -C "zieba@mpia-hd.mpg.de"
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/id_rsa
+
+COPY THE KEY 
+cat .ssh/id_rsa.pub
+
+OR USE CLIP
+
+sudo apt-get install xclip
+xclip -sel clip < ~/.ssh/id_rsa.pub
+
+
+GO TO GITHUB AND ENTER THE CODE IN THE SETTINGS
+
+GO TO .git/config AND MODIFY THE url TO LOOK LIKE THAT
+        url = git@github.com:sebastian-zieba/playground.git
+
+FINALLY, ADD github.com AS A KNOWN HOST
+ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+
+ssh should work now.
+
+
+
+
+# Some commands
+
+DISPLAY THE SNAPSHOTS NEATLY
+git log --all --graph --decorate --oneline
+
+
