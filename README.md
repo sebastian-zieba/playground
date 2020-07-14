@@ -1,2 +1,3 @@
 # playground
-## This repo will be used by me in order to learn git and Github
+
+## This is some playground
