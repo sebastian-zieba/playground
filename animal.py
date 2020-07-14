@@ -6,3 +6,5 @@ b = np.arange(4,7,1)
 print(a+b)
 
 print('this is a cat')
+
+print('this is a dog')
